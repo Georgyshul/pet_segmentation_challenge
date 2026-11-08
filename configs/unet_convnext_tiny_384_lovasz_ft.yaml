@@ -1,0 +1,18 @@
+name: unet_convnext_tiny_384_lovasz_ft
+arch: unet
+encoder: tu-convnext_tiny
+init_checkpoint: wandb://georgy-shulyndin-cu/pet_segmentation/unet_convnext_tiny_384:latest
+
+image_size: 384
+epochs: 8
+batch_size: 16
+lr: 0.0001
+encoder_lr_mult: 0.5
+warmup_epochs: 0
+patience: 4
+loss: bce_lovasz
+
+zoom_out_p: 0.3
+mosaic_p: 0.2
+
+tta_sizes: [384, 512]

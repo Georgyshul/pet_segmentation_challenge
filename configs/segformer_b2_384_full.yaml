@@ -1,0 +1,17 @@
+name: segformer_b2_384_full
+arch: segformer
+encoder: mit_b2
+
+image_size: 384
+epochs: 20
+batch_size: 16
+lr: 0.0003
+encoder_lr_mult: 0.3
+weight_decay: 0.01
+warmup_epochs: 2
+val_size: 0
+
+zoom_out_p: 0.3
+mosaic_p: 0.2
+
+tta_sizes: [384, 512]

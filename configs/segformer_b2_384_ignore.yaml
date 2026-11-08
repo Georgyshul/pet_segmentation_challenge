@@ -1,0 +1,20 @@
+name: segformer_b2_384_ignore
+arch: segformer
+encoder: mit_b2
+
+image_size: 384
+epochs: 15
+batch_size: 16
+lr: 0.0003
+encoder_lr_mult: 0.3
+weight_decay: 0.01
+warmup_epochs: 2
+patience: 100
+
+boundary: ignore
+val_boundary: ignore
+
+zoom_out_p: 0.3
+mosaic_p: 0.2
+
+tta_sizes: [512]

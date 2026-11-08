@@ -1,0 +1,13 @@
+name: unet_r34_256
+arch: unet
+encoder: resnet34
+
+image_size: 256
+epochs: 15
+batch_size: 32
+lr: 0.0005
+encoder_lr_mult: 0.2
+patience: 4
+
+tta_sizes: [256]
+worst_every: 3

@@ -1,0 +1,19 @@
+name: unet_convnext_tiny_384
+arch: unet
+encoder: tu-convnext_tiny
+
+image_size: 384
+epochs: 30
+batch_size: 16
+lr: 0.0004
+encoder_lr_mult: 0.25
+weight_decay: 0.0001
+warmup_epochs: 1
+patience: 6
+
+crop_scale: [0.4, 1.0]
+zoom_out_p: 0.3
+zoom_out_scale: [0.35, 1.0]
+mosaic_p: 0.2
+
+tta_sizes: [384, 512]

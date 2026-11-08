@@ -1,0 +1,17 @@
+name: unet_effv2s_384_ignore_full
+arch: unet
+encoder: tu-tf_efficientnetv2_s
+
+image_size: 384
+epochs: 15
+batch_size: 16
+lr: 0.0005
+encoder_lr_mult: 0.2
+val_size: 0
+
+boundary: ignore
+
+zoom_out_p: 0.3
+mosaic_p: 0.2
+
+tta_sizes: [512]

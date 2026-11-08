@@ -1,0 +1,20 @@
+name: ens_effv2s_segformer_ignore
+members:
+  - checkpoint: wandb://georgy-shulyndin-cu/pet_segmentation/unet_effv2s_384_ignore:latest
+    sizes: [512]
+    weight: 1.0
+  - checkpoint: wandb://georgy-shulyndin-cu/pet_segmentation/segformer_b2_384_ignore:latest
+    sizes: [512]
+    weight: 1.0
+
+search: true
+search_threshold: false
+threshold: 0.5
+val_boundary: ignore
+
+flip_tta: true
+refine: false
+postprocess: false
+
+submit: false
+message: ""

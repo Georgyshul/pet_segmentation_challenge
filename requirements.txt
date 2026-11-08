@@ -1,0 +1,10 @@
+segmentation-models-pytorch>=0.5
+albumentations>=2.0.5
+lightning>=2.4
+torchmetrics
+timm>=1.0.20
+wandb
+kaggle>=2.2.5
+kagglehub
+PyYAML
+tqdm
